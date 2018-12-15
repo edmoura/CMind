@@ -18,6 +18,7 @@ final class ArticleView: UserInterface {
     @IBOutlet weak var publishedAt: UILabel!
     @IBOutlet weak var topSpaceConstraint: NSLayoutConstraint!
     @IBOutlet weak var btVisit: UIButton!
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBAction func buttonVisit(_ sender: Any) {
         presenter.buttonVisit()
     }
@@ -45,7 +46,10 @@ extension ArticleView: ArticleViewApi {
     
     func setArticlesHeadlines(article: ArticlesHeadlines?) {
         let published = Date.fromString(article?.publishedAt ?? "")
-        urlToImage.alpha = 0
+        self.loading.startAnimating()
+        UIView.animate(withDuration: 0.5, animations: {
+            self.urlToImage.alpha = 0
+        })
         _title.text = article?.title
         _description.text = article?.description
         author.text = article?.author
@@ -59,6 +63,7 @@ extension ArticleView: ArticleViewApi {
                     self.urlToImage.alpha = 1
                 })
             }
+            self.loading.stopAnimating()
         }
     }
 }
@@ -70,6 +75,10 @@ extension ArticleView: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return presenter.collectionView(collectionView, cellForItemAt: indexPath)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        return presenter.collectionView(collectionView, didSelectItemAt: indexPath)
     }
 }
 

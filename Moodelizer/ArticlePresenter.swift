@@ -13,6 +13,7 @@ import Viperit
 final class ArticlePresenter: Presenter {
     
     var feed: Article?
+    var article: ArticlesHeadlines?
     var collectionFeed: [ArticlesHeadlines]?
     
     override func viewHasLoaded() {
@@ -20,7 +21,7 @@ final class ArticlePresenter: Presenter {
     }
     
     override func setupView(data: Any) {
-       feed = data as? Article
+        feed = data as? Article
     }
 }
 
@@ -28,16 +29,21 @@ final class ArticlePresenter: Presenter {
 extension ArticlePresenter: ArticlePresenterApi {
     func startContent() {
         let name = feed?.article?.source?.name
-        collectionFeed = feed?.fullArticles?.filter({ $0.source?.name != name })
-        view.setTitle(title: name)
-        view.setArticlesHeadlines(article: feed?.article)
+        self.article = feed?.article
         view.configButton()
         view.configCollectionView()
+        reloadContent(name: name ?? "")
+    }
+    
+    func reloadContent(name: String) {
+        collectionFeed = feed?.fullArticles?.filter({ $0.source?.name != name })
         view.reloadCollectionViewData()
+        view.setTitle(title: name)
+        view.setArticlesHeadlines(article: self.article)
     }
     
     func buttonVisit() {
-        
+        router.showWebView(article: self.article)
     }
     
     func getTotalArticles() -> Int {
@@ -52,6 +58,14 @@ extension ArticlePresenter: ArticlePresenterApi {
             cell?.update(article: _article)
         }
         return cell ?? UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let article = collectionFeed?[exist: indexPath.row] {
+            let name = article.source?.name
+            self.article = article
+            reloadContent(name: name ?? "")
+        }
     }
 }
 

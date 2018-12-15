@@ -10,6 +10,7 @@ import Viperit
 
 //MARK: - ArticleRouter API
 protocol ArticleRouterApi: RouterProtocol {
+    func showWebView(article: ArticlesHeadlines?)
 }
 
 //MARK: - ArticleView API
@@ -26,6 +27,7 @@ protocol ArticlePresenterApi: PresenterProtocol {
     func buttonVisit()
     func getTotalArticles() -> Int
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
 }
 
 //MARK: - ArticleInteractor API

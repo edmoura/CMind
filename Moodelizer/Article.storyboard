@@ -27,12 +27,15 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m2t-h7-Z7s">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="522"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1ln-oE-cHT">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1ln-oE-cHT">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="BwC-DT-1fR"/>
                                                 </constraints>
                                             </imageView>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jAF-22-Fe0">
+                                                <rect key="frame" x="177.5" y="90" width="20" height="20"/>
+                                            </activityIndicatorView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="n1j-gZ-NpT">
                                                 <rect key="frame" x="20" y="220" width="335" height="282"/>
                                                 <subviews>
@@ -89,6 +92,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="jAF-22-Fe0" firstAttribute="centerX" secondItem="1ln-oE-cHT" secondAttribute="centerX" id="65w-ra-CuH"/>
                                             <constraint firstItem="n1j-gZ-NpT" firstAttribute="top" secondItem="1ln-oE-cHT" secondAttribute="bottom" constant="20" id="Des-Kx-BrR"/>
                                             <constraint firstItem="1ln-oE-cHT" firstAttribute="top" secondItem="m2t-h7-Z7s" secondAttribute="top" id="EIX-e5-PRZ"/>
                                             <constraint firstAttribute="trailing" secondItem="n1j-gZ-NpT" secondAttribute="trailing" constant="20" id="EOj-NG-RyO"/>
@@ -96,6 +100,7 @@
                                             <constraint firstItem="n1j-gZ-NpT" firstAttribute="leading" secondItem="m2t-h7-Z7s" secondAttribute="leading" constant="20" id="Tu8-T3-SM6"/>
                                             <constraint firstAttribute="bottom" secondItem="n1j-gZ-NpT" secondAttribute="bottom" constant="20" id="gZk-0g-H3c"/>
                                             <constraint firstAttribute="trailing" secondItem="1ln-oE-cHT" secondAttribute="trailing" id="iVV-YL-wxL"/>
+                                            <constraint firstItem="jAF-22-Fe0" firstAttribute="centerY" secondItem="1ln-oE-cHT" secondAttribute="centerY" id="xJl-eg-lVy"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -181,6 +186,7 @@
                         <outlet property="author" destination="Zx9-mf-yxL" id="qnh-7d-gb4"/>
                         <outlet property="btVisit" destination="rrc-I6-JyU" id="Orb-rg-dGh"/>
                         <outlet property="collectionView" destination="Efd-kb-g5R" id="m3Y-wI-aAn"/>
+                        <outlet property="loading" destination="jAF-22-Fe0" id="xUT-Os-UqL"/>
                         <outlet property="publishedAt" destination="BV8-v7-5mm" id="qaD-YQ-Ekr"/>
                         <outlet property="topSpaceConstraint" destination="EIX-e5-PRZ" id="zAH-Vo-or6"/>
                         <outlet property="urlToImage" destination="1ln-oE-cHT" id="CIb-Pg-age"/>

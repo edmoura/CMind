@@ -11,6 +11,10 @@ import Viperit
 
 // MARK: - ArticleRouter class
 final class ArticleRouter: Router {
+    func showWebView(article: ArticlesHeadlines?) {
+        let module = AppModules.Browser.build()
+        module.router.show(from: _view, embedInNavController: true, setupData: article)
+    }
 }
 
 // MARK: - ArticleRouter API

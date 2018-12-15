@@ -16,6 +16,13 @@
 		88405F0221BC1ABB00483FE1 /* MoodelizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88405F0121BC1ABB00483FE1 /* MoodelizerTests.swift */; };
 		88405F0D21BC1ABB00483FE1 /* MoodelizerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88405F0C21BC1ABB00483FE1 /* MoodelizerUITests.swift */; };
 		8882FEF921C53B9D001BBCCC /* ArticleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FEF821C53B9D001BBCCC /* ArticleCollectionViewCell.swift */; };
+		8882FF0221C54993001BBCCC /* Browser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8882FEFB21C54993001BBCCC /* Browser.storyboard */; };
+		8882FF0321C54993001BBCCC /* BrowserDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FEFC21C54993001BBCCC /* BrowserDisplayData.swift */; };
+		8882FF0421C54993001BBCCC /* BrowserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FEFD21C54993001BBCCC /* BrowserPresenter.swift */; };
+		8882FF0521C54993001BBCCC /* BrowserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FEFE21C54993001BBCCC /* BrowserRouter.swift */; };
+		8882FF0621C54993001BBCCC /* BrowserModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FEFF21C54993001BBCCC /* BrowserModuleApi.swift */; };
+		8882FF0721C54993001BBCCC /* BrowserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FF0021C54993001BBCCC /* BrowserInteractor.swift */; };
+		8882FF0821C54993001BBCCC /* BrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FF0121C54993001BBCCC /* BrowserView.swift */; };
 		889712E521BC23F300D88DD4 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889712E421BC23F300D88DD4 /* UIImage+.swift */; };
 		889712E721BC267800D88DD4 /* AttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889712E621BC267800D88DD4 /* AttributedStringExtensions.swift */; };
 		889712E921BC3DCB00D88DD4 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889712E821BC3DCB00D88DD4 /* ArticleTableViewCell.swift */; };
@@ -80,6 +87,13 @@
 		88405F0C21BC1ABB00483FE1 /* MoodelizerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodelizerUITests.swift; sourceTree = "<group>"; };
 		88405F0E21BC1ABB00483FE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8882FEF821C53B9D001BBCCC /* ArticleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCollectionViewCell.swift; sourceTree = "<group>"; };
+		8882FEFB21C54993001BBCCC /* Browser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Browser.storyboard; sourceTree = "<group>"; };
+		8882FEFC21C54993001BBCCC /* BrowserDisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserDisplayData.swift; sourceTree = "<group>"; };
+		8882FEFD21C54993001BBCCC /* BrowserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserPresenter.swift; sourceTree = "<group>"; };
+		8882FEFE21C54993001BBCCC /* BrowserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserRouter.swift; sourceTree = "<group>"; };
+		8882FEFF21C54993001BBCCC /* BrowserModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserModuleApi.swift; sourceTree = "<group>"; };
+		8882FF0021C54993001BBCCC /* BrowserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserInteractor.swift; sourceTree = "<group>"; };
+		8882FF0121C54993001BBCCC /* BrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserView.swift; sourceTree = "<group>"; };
 		889712E421BC23F300D88DD4 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		889712E621BC267800D88DD4 /* AttributedStringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringExtensions.swift; sourceTree = "<group>"; };
 		889712E821BC3DCB00D88DD4 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
@@ -214,6 +228,20 @@
 			path = MoodelizerUITests;
 			sourceTree = "<group>";
 		};
+		8882FEFA21C54975001BBCCC /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				8882FEFB21C54993001BBCCC /* Browser.storyboard */,
+				8882FEFC21C54993001BBCCC /* BrowserDisplayData.swift */,
+				8882FEFD21C54993001BBCCC /* BrowserPresenter.swift */,
+				8882FEFE21C54993001BBCCC /* BrowserRouter.swift */,
+				8882FEFF21C54993001BBCCC /* BrowserModuleApi.swift */,
+				8882FF0021C54993001BBCCC /* BrowserInteractor.swift */,
+				8882FF0121C54993001BBCCC /* BrowserView.swift */,
+			);
+			name = Browser;
+			sourceTree = "<group>";
+		};
 		889712E321BC23CA00D88DD4 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +287,7 @@
 		88C2C2A221BC1F260057327C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8882FEFA21C54975001BBCCC /* Browser */,
 				88C2C2AB21BC211F0057327C /* Article */,
 				88C2C2AA21BC21090057327C /* Index */,
 			);
@@ -418,6 +447,7 @@
 				88C2C2C121BC21E30057327C /* Article.storyboard in Resources */,
 				88405EF721BC1ABB00483FE1 /* LaunchScreen.storyboard in Resources */,
 				88405EF421BC1ABB00483FE1 /* Assets.xcassets in Resources */,
+				8882FF0221C54993001BBCCC /* Browser.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,21 +653,27 @@
 			files = (
 				88C2C2B421BC21D30057327C /* IndexDisplayData.swift in Sources */,
 				88C2C2A721BC1FC80057327C /* Result.swift in Sources */,
+				8882FF0521C54993001BBCCC /* BrowserRouter.swift in Sources */,
+				8882FF0621C54993001BBCCC /* BrowserModuleApi.swift in Sources */,
 				88C2C2C221BC21E30057327C /* ArticleDisplayData.swift in Sources */,
 				889712E521BC23F300D88DD4 /* UIImage+.swift in Sources */,
 				88C2C2A921BC1FE60057327C /* AppModule.swift in Sources */,
+				8882FF0421C54993001BBCCC /* BrowserPresenter.swift in Sources */,
 				889712F321BC559F00D88DD4 /* AppErrorHandler.swift in Sources */,
 				88C2C2B921BC21D30057327C /* IndexView.swift in Sources */,
 				88C2C2C421BC21E30057327C /* ArticleRouter.swift in Sources */,
+				8882FF0821C54993001BBCCC /* BrowserView.swift in Sources */,
 				88C2C2B521BC21D30057327C /* IndexPresenter.swift in Sources */,
 				889712F121BC4BF400D88DD4 /* UIView+.swift in Sources */,
 				889712E921BC3DCB00D88DD4 /* ArticleTableViewCell.swift in Sources */,
 				889712F721BC6B3B00D88DD4 /* DateExtensions.swift in Sources */,
 				88C2C2C521BC21E30057327C /* ArticleModuleApi.swift in Sources */,
 				8882FEF921C53B9D001BBCCC /* ArticleCollectionViewCell.swift in Sources */,
+				8882FF0321C54993001BBCCC /* BrowserDisplayData.swift in Sources */,
 				88C2C2C621BC21E30057327C /* ArticleInteractor.swift in Sources */,
 				889712F521BC631100D88DD4 /* Collection+Exist.swift in Sources */,
 				88405EED21BC1ABA00483FE1 /* AppDelegate.swift in Sources */,
+				8882FF0721C54993001BBCCC /* BrowserInteractor.swift in Sources */,
 				88C2C2B821BC21D30057327C /* IndexInteractor.swift in Sources */,
 				889712E721BC267800D88DD4 /* AttributedStringExtensions.swift in Sources */,
 				88C2C2C721BC21E30057327C /* ArticleView.swift in Sources */,

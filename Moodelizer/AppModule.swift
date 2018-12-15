@@ -12,4 +12,5 @@ import Viperit
 enum AppModules: String, ViperitModule {
     case Index
     case Article
+    case Browser
 }
