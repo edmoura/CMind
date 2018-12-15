@@ -12,13 +12,11 @@ import Viperit
 // MARK: - IndexPresenter Class
 final class IndexPresenter: Presenter {
     
-    private var articles = [ArticlesHeadlines]()
-    private var pageSize = 10
-    private var page = 1
-    private var isLoadingArticles = false
-    private var isLoadedAllArticles = false
-    private var tasks = [URLSessionTask]()
-    private var imageTask = [UIImage]()
+    var articles = [ArticlesHeadlines]()
+    var pageSize: Int = 10
+    var page: Int = 1
+    var isLoadingArticles: Bool = false
+    var isLoadedAllArticles: Bool = false
     
     override func viewHasLoaded() {
         startContent()
@@ -35,7 +33,7 @@ extension IndexPresenter: IndexPresenterApi {
         getArticles(pageSize: pageSize, page: page)
     }
     
-    private func getArticles(country:String = "us", pageSize: Int, page: Int, apiKey: String = "a878d9cab50c46e2a2854adab5de1277") {
+    func getArticles(country:String = "us", pageSize: Int, page: Int, apiKey: String = "a878d9cab50c46e2a2854adab5de1277") {
         interactor.getArticle(country: country, pageSize: pageSize, page: page, apiKey: apiKey) { (result) in
             switch result {
             case .success(let data):

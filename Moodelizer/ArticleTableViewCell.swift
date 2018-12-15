@@ -43,7 +43,7 @@ class ArticleTableViewCell: UITableViewCell, ArticleTableProtocol {
     }
     
     func update(article: ArticlesHeadlines?) {
-        name.text = article?.source?.name
+        name.text = article?.source?.name?.components(separatedBy: ".").first
         _description.text = article?.description
         urlToImage.sd_setImage(with: URL(string: article?.urlToImage ?? "")) { (image, error, cacheType, imageUrl) in
             if error != nil {

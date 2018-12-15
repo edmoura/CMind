@@ -38,7 +38,7 @@ extension ArticlePresenter: ArticlePresenterApi {
     func reloadContent(name: String) {
         collectionFeed = feed?.fullArticles?.filter({ $0.source?.name != name })
         view.reloadCollectionViewData()
-        view.setTitle(title: name)
+        view.setTitle(title: name.components(separatedBy: ".").first)
         view.setArticlesHeadlines(article: self.article)
     }
     

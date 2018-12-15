@@ -23,6 +23,12 @@
 		8882FF0621C54993001BBCCC /* BrowserModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FEFF21C54993001BBCCC /* BrowserModuleApi.swift */; };
 		8882FF0721C54993001BBCCC /* BrowserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FF0021C54993001BBCCC /* BrowserInteractor.swift */; };
 		8882FF0821C54993001BBCCC /* BrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FF0121C54993001BBCCC /* BrowserView.swift */; };
+		8882FF0B21C56DD4001BBCCC /* IndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FF0A21C56DD4001BBCCC /* IndexTests.swift */; };
+		8882FF0E21C570C1001BBCCC /* IndexMockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FF0D21C570C1001BBCCC /* IndexMockView.swift */; };
+		8882FF1121C5809A001BBCCC /* ArticleMockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FF1021C5809A001BBCCC /* ArticleMockView.swift */; };
+		8882FF1321C580FD001BBCCC /* ArticleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FF1221C580FD001BBCCC /* ArticleTests.swift */; };
+		8882FF1621C5835E001BBCCC /* BrowserMockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FF1521C5835E001BBCCC /* BrowserMockView.swift */; };
+		8882FF1821C583A3001BBCCC /* BrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FF1721C583A3001BBCCC /* BrowserTests.swift */; };
 		889712E521BC23F300D88DD4 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889712E421BC23F300D88DD4 /* UIImage+.swift */; };
 		889712E721BC267800D88DD4 /* AttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889712E621BC267800D88DD4 /* AttributedStringExtensions.swift */; };
 		889712E921BC3DCB00D88DD4 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889712E821BC3DCB00D88DD4 /* ArticleTableViewCell.swift */; };
@@ -94,6 +100,12 @@
 		8882FEFF21C54993001BBCCC /* BrowserModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserModuleApi.swift; sourceTree = "<group>"; };
 		8882FF0021C54993001BBCCC /* BrowserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserInteractor.swift; sourceTree = "<group>"; };
 		8882FF0121C54993001BBCCC /* BrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserView.swift; sourceTree = "<group>"; };
+		8882FF0A21C56DD4001BBCCC /* IndexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexTests.swift; sourceTree = "<group>"; };
+		8882FF0D21C570C1001BBCCC /* IndexMockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexMockView.swift; sourceTree = "<group>"; };
+		8882FF1021C5809A001BBCCC /* ArticleMockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleMockView.swift; sourceTree = "<group>"; };
+		8882FF1221C580FD001BBCCC /* ArticleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTests.swift; sourceTree = "<group>"; };
+		8882FF1521C5835E001BBCCC /* BrowserMockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserMockView.swift; sourceTree = "<group>"; };
+		8882FF1721C583A3001BBCCC /* BrowserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserTests.swift; sourceTree = "<group>"; };
 		889712E421BC23F300D88DD4 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		889712E621BC267800D88DD4 /* AttributedStringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringExtensions.swift; sourceTree = "<group>"; };
 		889712E821BC3DCB00D88DD4 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
@@ -213,6 +225,7 @@
 		88405F0021BC1ABB00483FE1 /* MoodelizerTests */ = {
 			isa = PBXGroup;
 			children = (
+				8882FF0921C56D93001BBCCC /* Modules */,
 				88405F0121BC1ABB00483FE1 /* MoodelizerTests.swift */,
 				88405F0321BC1ABB00483FE1 /* Info.plist */,
 			);
@@ -240,6 +253,43 @@
 				8882FF0121C54993001BBCCC /* BrowserView.swift */,
 			);
 			name = Browser;
+			sourceTree = "<group>";
+		};
+		8882FF0921C56D93001BBCCC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8882FF1421C58341001BBCCC /* Browser */,
+				8882FF0F21C58080001BBCCC /* Article */,
+				8882FF0C21C570AA001BBCCC /* Index */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8882FF0C21C570AA001BBCCC /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				8882FF0A21C56DD4001BBCCC /* IndexTests.swift */,
+				8882FF0D21C570C1001BBCCC /* IndexMockView.swift */,
+			);
+			path = Index;
+			sourceTree = "<group>";
+		};
+		8882FF0F21C58080001BBCCC /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				8882FF1021C5809A001BBCCC /* ArticleMockView.swift */,
+				8882FF1221C580FD001BBCCC /* ArticleTests.swift */,
+			);
+			path = Article;
+			sourceTree = "<group>";
+		};
+		8882FF1421C58341001BBCCC /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				8882FF1521C5835E001BBCCC /* BrowserMockView.swift */,
+				8882FF1721C583A3001BBCCC /* BrowserTests.swift */,
+			);
+			path = Browser;
 			sourceTree = "<group>";
 		};
 		889712E321BC23CA00D88DD4 /* Extension */ = {
@@ -479,13 +529,10 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Moodelizer/Pods-Moodelizer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Viperit/Viperit.framework",
-				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
-				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -493,13 +540,10 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Viperit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -561,7 +605,6 @@
 				"${PODS_ROOT}/Target Support Files/Pods-MoodelizerTests/Pods-MoodelizerTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/Viperit/Viperit.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
@@ -573,7 +616,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Viperit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
@@ -617,13 +659,12 @@
 				"${PODS_ROOT}/Target Support Files/Pods-MoodelizerUITests/Pods-MoodelizerUITests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Viperit/Viperit.framework",
-				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
-				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -631,13 +672,12 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Viperit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -690,6 +730,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8882FF0B21C56DD4001BBCCC /* IndexTests.swift in Sources */,
+				8882FF1821C583A3001BBCCC /* BrowserTests.swift in Sources */,
+				8882FF1321C580FD001BBCCC /* ArticleTests.swift in Sources */,
+				8882FF1121C5809A001BBCCC /* ArticleMockView.swift in Sources */,
+				8882FF1621C5835E001BBCCC /* BrowserMockView.swift in Sources */,
+				8882FF0E21C570C1001BBCCC /* IndexMockView.swift in Sources */,
 				88405F0221BC1ABB00483FE1 /* MoodelizerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -780,7 +826,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -835,7 +881,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -849,9 +895,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF9099B82D2BDC85A667A531 /* Pods-Moodelizer.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88W3DLZAQB;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Moodelizer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -869,9 +918,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FFD2E1A9587D22516ADD6F4C /* Pods-Moodelizer.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88W3DLZAQB;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Moodelizer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

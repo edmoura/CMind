@@ -20,7 +20,7 @@ class ArticleCollectionViewCell: UICollectionViewCell, ArticleCollectionProtocol
     
     func update(article: ArticlesHeadlines?) {
         
-        title.text = article?.source?.name
+        title.text = article?.source?.name?.components(separatedBy: ".").first
         image.sd_setImage(with: URL(string: article?.urlToImage ?? "")) { (image, error, cacheType, imageUrl) in
             if error != nil {
                 self.image.image = UIImage(named: "empty")
