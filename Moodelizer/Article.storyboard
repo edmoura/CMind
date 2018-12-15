@@ -111,6 +111,13 @@
                                     <constraint firstAttribute="bottom" secondItem="m2t-h7-Z7s" secondAttribute="bottom" id="Zdn-GY-cKP"/>
                                 </constraints>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lH1-mn-1TU">
+                                <rect key="frame" x="0.0" y="737" width="375" height="1"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="3PC-VQ-txF"/>
+                                </constraints>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Efd-kb-g5R">
                                 <rect key="frame" x="0.0" y="738" width="375" height="129"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -165,17 +172,21 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Efd-kb-g5R" firstAttribute="leading" secondItem="kgt-o0-aP8" secondAttribute="leading" id="3JX-Eo-sTB"/>
                             <constraint firstItem="vb6-4r-Epx" firstAttribute="top" secondItem="XJL-W4-UUu" secondAttribute="bottom" constant="130" id="FLD-zZ-fTT"/>
                             <constraint firstAttribute="trailing" secondItem="XJL-W4-UUu" secondAttribute="trailing" id="Hf8-Ou-HEa"/>
+                            <constraint firstItem="lH1-mn-1TU" firstAttribute="leading" secondItem="XJL-W4-UUu" secondAttribute="leading" id="KYz-Gf-Ycc"/>
                             <constraint firstItem="vb6-4r-Epx" firstAttribute="top" secondItem="Efd-kb-g5R" secondAttribute="bottom" id="Kac-2K-yd2"/>
+                            <constraint firstItem="Efd-kb-g5R" firstAttribute="top" secondItem="lH1-mn-1TU" secondAttribute="bottom" id="KgA-8f-eIr"/>
                             <constraint firstAttribute="trailing" secondItem="Efd-kb-g5R" secondAttribute="trailing" id="O9E-3l-bC9"/>
                             <constraint firstItem="m2t-h7-Z7s" firstAttribute="width" secondItem="kgt-o0-aP8" secondAttribute="width" id="VKC-XR-NIM"/>
                             <constraint firstItem="XJL-W4-UUu" firstAttribute="top" secondItem="EcR-ye-kTk" secondAttribute="bottom" id="Ynk-w2-Q48"/>
+                            <constraint firstItem="lH1-mn-1TU" firstAttribute="trailing" secondItem="XJL-W4-UUu" secondAttribute="trailing" id="cNQ-zg-E4U"/>
                             <constraint firstItem="XJL-W4-UUu" firstAttribute="leading" secondItem="kgt-o0-aP8" secondAttribute="leading" id="fWi-YJ-qvS"/>
                             <constraint firstItem="Efd-kb-g5R" firstAttribute="top" secondItem="XJL-W4-UUu" secondAttribute="bottom" constant="1" id="vGb-bD-Ctl"/>
+                            <constraint firstItem="lH1-mn-1TU" firstAttribute="top" secondItem="XJL-W4-UUu" secondAttribute="bottom" id="xkv-d3-By8"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="375" height="867"/>
