@@ -74,9 +74,14 @@ extension IndexView: IndexViewApi {
             }
         }
     }
+    
+    func getTableView() -> UITableView {
+        return self.tableView
+    }
 }
 
 extension IndexView: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.getTotalNews()
     }

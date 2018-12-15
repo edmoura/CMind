@@ -28,3 +28,8 @@ struct ArticlesHeadlines: Codable {
 struct ArticlesHeadlinesSource: Codable {
     let name: String?
 }
+
+struct Article:Codable {
+    let article: ArticlesHeadlines?
+    let fullArticles: [ArticlesHeadlines]?
+}

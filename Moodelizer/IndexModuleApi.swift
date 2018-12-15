@@ -10,7 +10,7 @@ import Viperit
 
 //MARK: - IndexRouter API
 protocol IndexRouterApi: RouterProtocol {
-    func showArticlesDetails(data: ArticlesHeadlines?)
+    func showArticlesDetails(data: Article?)
 }
 
 //MARK: - IndexView API
@@ -22,6 +22,7 @@ protocol IndexViewApi: UserInterfaceProtocol {
     func showLoadingMoreArticles()
     func hideLoadingMoreArticles()
     func hideLoadingIndex()
+    func getTableView() -> UITableView
 }
 
 //MARK: - IndexPresenter API

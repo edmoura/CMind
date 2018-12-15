@@ -16,10 +16,16 @@ protocol ArticleRouterApi: RouterProtocol {
 protocol ArticleViewApi: UserInterfaceProtocol {
     func setTitle(title: String?)
     func setArticlesHeadlines(article: ArticlesHeadlines?)
+    func configButton()
+    func configCollectionView()
+    func reloadCollectionViewData()
 }
 
 //MARK: - ArticlePresenter API
 protocol ArticlePresenterApi: PresenterProtocol {
+    func buttonVisit()
+    func getTotalArticles() -> Int
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
 }
 
 //MARK: - ArticleInteractor API

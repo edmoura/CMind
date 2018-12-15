@@ -15,7 +15,7 @@ final class IndexRouter: Router {
 
 // MARK: - IndexRouter API
 extension IndexRouter: IndexRouterApi {
-    func showArticlesDetails(data: ArticlesHeadlines?) {
+    func showArticlesDetails(data: Article?) {
         let module = AppModules.Article.build()
         module.router.show(from: _view, embedInNavController: false, setupData: data)
     }

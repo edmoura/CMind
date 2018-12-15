@@ -11,11 +11,14 @@ import Viperit
 
 // MARK: - IndexPresenter Class
 final class IndexPresenter: Presenter {
-    var articles = [ArticlesHeadlines]()
-    var pageSize = 10
-    var page = 1
-    var isLoadingArticles = false
-    var isLoadedAllArticles = false
+    
+    private var articles = [ArticlesHeadlines]()
+    private var pageSize = 10
+    private var page = 1
+    private var isLoadingArticles = false
+    private var isLoadedAllArticles = false
+    private var tasks = [URLSessionTask]()
+    private var imageTask = [UIImage]()
     
     override func viewHasLoaded() {
         startContent()
@@ -58,11 +61,14 @@ extension IndexPresenter: IndexPresenterApi {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell: ArticleTableViewCell? = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as? ArticleTableViewCell
+        
         if cell == nil {
             cell = ArticleTableViewCell(style:.default, reuseIdentifier: "newsCell")
         }
+        
         let article = self.articles[exist: indexPath.row]
         cell?.update(article: article)
+        
         return cell ?? UITableViewCell()
     }
     
@@ -85,10 +91,11 @@ extension IndexPresenter: IndexPresenterApi {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let article = self.articles[exist: indexPath.row] {
+            let article = Article(article: article, fullArticles: self.articles)
             router.showArticlesDetails(data: article)
         }
     }
-    
+
     func getTotalNews() -> Int {
         return articles.count
     }

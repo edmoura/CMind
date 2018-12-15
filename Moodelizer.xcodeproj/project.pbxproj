@@ -15,6 +15,7 @@
 		88405EF721BC1ABB00483FE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88405EF521BC1ABB00483FE1 /* LaunchScreen.storyboard */; };
 		88405F0221BC1ABB00483FE1 /* MoodelizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88405F0121BC1ABB00483FE1 /* MoodelizerTests.swift */; };
 		88405F0D21BC1ABB00483FE1 /* MoodelizerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88405F0C21BC1ABB00483FE1 /* MoodelizerUITests.swift */; };
+		8882FEF921C53B9D001BBCCC /* ArticleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8882FEF821C53B9D001BBCCC /* ArticleCollectionViewCell.swift */; };
 		889712E521BC23F300D88DD4 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889712E421BC23F300D88DD4 /* UIImage+.swift */; };
 		889712E721BC267800D88DD4 /* AttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889712E621BC267800D88DD4 /* AttributedStringExtensions.swift */; };
 		889712E921BC3DCB00D88DD4 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889712E821BC3DCB00D88DD4 /* ArticleTableViewCell.swift */; };
@@ -78,6 +79,7 @@
 		88405F0821BC1ABB00483FE1 /* MoodelizerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoodelizerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88405F0C21BC1ABB00483FE1 /* MoodelizerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodelizerUITests.swift; sourceTree = "<group>"; };
 		88405F0E21BC1ABB00483FE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8882FEF821C53B9D001BBCCC /* ArticleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCollectionViewCell.swift; sourceTree = "<group>"; };
 		889712E421BC23F300D88DD4 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		889712E621BC267800D88DD4 /* AttributedStringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringExtensions.swift; sourceTree = "<group>"; };
 		889712E821BC3DCB00D88DD4 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 				88C2C2BE21BC21E30057327C /* ArticleModuleApi.swift */,
 				88C2C2BF21BC21E30057327C /* ArticleInteractor.swift */,
 				88C2C2C021BC21E30057327C /* ArticleView.swift */,
+				8882FEF821C53B9D001BBCCC /* ArticleCollectionViewCell.swift */,
 			);
 			name = Article;
 			sourceTree = "<group>";
@@ -631,6 +634,7 @@
 				889712E921BC3DCB00D88DD4 /* ArticleTableViewCell.swift in Sources */,
 				889712F721BC6B3B00D88DD4 /* DateExtensions.swift in Sources */,
 				88C2C2C521BC21E30057327C /* ArticleModuleApi.swift in Sources */,
+				8882FEF921C53B9D001BBCCC /* ArticleCollectionViewCell.swift in Sources */,
 				88C2C2C621BC21E30057327C /* ArticleInteractor.swift in Sources */,
 				889712F521BC631100D88DD4 /* Collection+Exist.swift in Sources */,
 				88405EED21BC1ABA00483FE1 /* AppDelegate.swift in Sources */,
