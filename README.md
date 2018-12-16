@@ -19,4 +19,4 @@ This project uses [CocoaPods](https://cocoapods.org). All you need to setup it p
 * Quick: [GitHub](https://github.com/Quick/Quick). 
 * Nimble: [GitHub](https://github.com/Quick/Nimble). 
 
-This project is about a consuming a news API with Viper architecture, UI and Unit tests, if you download the project I really recommend you to do your own key on [News API].
+This project is about consuming a news API with Viper architecture, UI and Unit tests, if you download the project I really recommend you to do your own key on [News API].
