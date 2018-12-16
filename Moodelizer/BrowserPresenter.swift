@@ -8,6 +8,7 @@
 
 import Foundation
 import Viperit
+import WebKit
 
 // MARK: - BrowserPresenter Class
 final class BrowserPresenter: Presenter {
@@ -40,6 +41,33 @@ extension BrowserPresenter: BrowserPresenterApi {
     
     func buttonClose() {
         router.dismissViewControllerAnimated()
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        view.hideProgressView()
+    }
+    
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        view.showProgressView()
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        view.hideProgressView()
+    }
+    
+    func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "estimatedProgress" {
+            if let progress = (change?[NSKeyValueChangeKey.newKey] as AnyObject).floatValue {
+                view.setProgressView(float: progress)
+            }
+            return
+        }
+        if keyPath == "title" {
+            if let title = change?[NSKeyValueChangeKey.newKey] as? String {
+               view.setTitleView(title: title)
+            }
+            return
+        }
     }
 }
 

@@ -11,6 +11,10 @@ import Viperit
 @testable import Moodelizer
 
 class BrowserMockView: UserInterface, BrowserViewApi {
+    func showProgressView() {}
+    func hideProgressView() {}
+    func setProgressView(float: Float) {}
+    func setTitleView(title: String) {}
     func configWebView() {}
     func addObserver() {}
     func removeObserver() {}

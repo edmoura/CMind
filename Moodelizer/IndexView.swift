@@ -45,6 +45,8 @@ extension IndexView: IndexViewApi {
         self.tableView.estimatedRowHeight = 150
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.tableFooterView = UIView(frame: .zero)
+        self.tableView.isAccessibilityElement = true
+        self.tableView.accessibilityIdentifier = "table--articleTableView"
     }
     
     func reloadTableViewData() {

@@ -24,6 +24,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1U-DN-5vU">
                                 <rect key="frame" x="310" y="40" width="45" height="45"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" identifier="button--closeArticleButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="6SF-Z8-TrP"/>
                                     <constraint firstAttribute="width" constant="45" id="DN2-xS-OZX"/>
@@ -48,6 +49,7 @@
                             </wkWebView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="P9T-wV-7Ok">
                                 <rect key="frame" x="20" y="62.5" width="270" height="0.0"/>
+                                <accessibility key="accessibilityConfiguration" identifier="label--webView"/>
                                 <edgeInsets key="layoutMargins" top="10" left="0.0" bottom="10" right="0.0"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
                                 <nil key="textColor"/>

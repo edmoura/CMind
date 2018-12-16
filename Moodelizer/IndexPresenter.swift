@@ -66,6 +66,8 @@ extension IndexPresenter: IndexPresenterApi {
         
         let article = self.articles[exist: indexPath.row]
         cell?.update(article: article)
+        cell?.isAccessibilityElement = true
+        cell?.accessibilityIdentifier = "cell--articleTableViewCell--\(indexPath.row)"
         
         return cell ?? UITableViewCell()
     }

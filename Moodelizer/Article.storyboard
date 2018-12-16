@@ -71,6 +71,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrc-I6-JyU">
                                                         <rect key="frame" x="0.0" y="137.5" width="335" height="30"/>
                                                         <color key="backgroundColor" red="0.31541302800178528" green="0.84449833631515503" blue="0.56416743993759155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="button--articleLinkButton"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="pKQ-Gv-wG8"/>
                                                         </constraints>

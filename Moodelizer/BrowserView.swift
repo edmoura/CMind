@@ -38,15 +38,8 @@ extension BrowserView: BrowserViewApi {
     }
     
     func addObserver() {
-        webView.addObserver(self,
-                            forKeyPath: #keyPath(WKWebView.estimatedProgress),
-                            options: .new,
-                            context: nil)
-        
-        webView.addObserver(self,
-                            forKeyPath: #keyPath(WKWebView.title),
-                            options: .new,
-                            context: nil)
+        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
+        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.title), options: .new, context: nil)
     }
     
     func removeObserver() {
@@ -66,39 +59,36 @@ extension BrowserView: BrowserViewApi {
         }, completion: nil)
     }
     
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?,
-                               change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == "estimatedProgress" {
-            if let progress = (change?[NSKeyValueChangeKey.newKey] as AnyObject).floatValue {
-                progressView.progress = progress;
+    func setProgressView(float: Float) {
+        progressView.progress = float;
+    }
+    
+    func setTitleView(title: String) {
+        self.navTitle.text = title
+        if self.navTitle.alpha == 0 {
+            UIView.animate(withDuration: 0.5) {
+                self.navTitle.alpha = 1
             }
-            return
-        }
-        if keyPath == "title" {
-            if let title = change?[NSKeyValueChangeKey.newKey] as? String {
-                self.navTitle.text = title
-                if self.navTitle.alpha == 0 {
-                    UIView.animate(withDuration: 0.5) {
-                        self.navTitle.alpha = 1
-                    }
-                }
-            }
-            return
         }
     }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        return presenter.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
+    }
+    
 }
 
 extension BrowserView: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        hideProgressView()
+        return presenter.webView(webView, didFinish: navigation)
     }
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        showProgressView()
+        return presenter.webView(webView, didStartProvisionalNavigation: navigation)
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-        hideProgressView()
+        return presenter.webView(webView, didFail: navigation, withError: error)
     }
 }
 
